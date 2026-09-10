@@ -1,0 +1,24 @@
+create table clientes (
+  id_cliente serial primary key,
+  nome_cliente varchar(300) not null,
+  cpf  varchar(300) unique not null,
+  telefone  varchar(300) unique,
+  endereco varchar(700)
+)
+
+create table veiculos (
+  id_veiculo serial primary key,
+  placa varchar(300) unique not null,
+  marca varchar(300) not null,
+  modelo varchar(700),
+  cor varchar(300)
+)
+
+create table manutencoes (
+  id_manutencao serial primary key,
+  data_entrada date not null,
+  descricao varchar(700) not null,
+  tipo_servico varchar(700),
+  situacao varchar(300),
+  valor varchar(300) not null
+)
